@@ -23,5 +23,11 @@ namespace ControllerExtensibility.Controllers
                 ActionName = "List"
             });
         }
+
+        [NonAction]
+        public ActionResult MyAction()
+        {
+            return View();
+        }
     }
 }
