@@ -25,5 +25,10 @@ namespace ControllerExtensibility.Controllers
                 ActionName = "LocalIndex"
             });
         }
+
+        protected override void HandleUnknownAction(string actionName)
+        {
+            Response.Write(string.Format($"Вы запросили {actionName} действие"));
+        }
     }
 }
